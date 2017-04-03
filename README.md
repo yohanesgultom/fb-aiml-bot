@@ -69,5 +69,5 @@ For production, consider using UWSGI + web server (eg. Nginx) (reference below)
 
 **Reference**
 
-Setting up UWSGI + Flask http://flask.pocoo.org/docs/0.12/deploying/uwsgi/
-Setting up UWSGI Emperor (UWSGI as service) + Nginx https://kradalby.no/uwsgi-and-nginx-on-debian-wheezy.html
+* Setting up UWSGI + Flask http://flask.pocoo.org/docs/0.12/deploying/uwsgi/
+* Setting up UWSGI Emperor (UWSGI as service) + Nginx https://kradalby.no/uwsgi-and-nginx-on-debian-wheezy.html
