@@ -8,11 +8,11 @@ from pprint import pprint
 config = ConfigParser.RawConfigParser()
 config.read('config')
 
-fb_page_token = ''
-fb_api_url = ''
-secret = ''
-verify_token = ''
-post_message_url = ''
+fb_page_token = 'fb_page_token'
+fb_api_url = 'fb_api_url'
+secret = 'secret'
+verify_token = 'verify_token'
+post_message_url = 'post_message_url'
 
 # read config
 config_section = 'aimlbot'
@@ -56,9 +56,9 @@ def chat():
                         'recipient': {'id': message['sender']['id']},
                         'message': {'text': k.respond(message['message']['text'])}
                     })
-                    status = requests.post(post_message_url, headers={'Content-Type': 'application/json'}, data=data)
-                    pprint(status.text)
-        return '', 200
+                    res = requests.post(post_message_url, headers={'Content-Type': 'application/json'}, data=data)
+                    pprint(res.text)
+        return data, 200
 
     return 'invalid request', 400
 

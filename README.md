@@ -10,6 +10,12 @@ pip install requests
 pip install requests[security]
 ```
 
+additionally, for testing:
+
+```
+pip install responses
+```
+
 **Configuration**
 
 A config file named `config` need to be created in the same directory as `server.py`. Example:
@@ -64,6 +70,19 @@ Running Flask bot server as standalone (dev or test):
 ```
 python server.py
 ```
+
+To try chatting with AIML bot in CLI:
+
+```
+python chat.py
+```
+
+To run unit tests using `pytest`:
+
+```
+pytest
+```
+
 
 For production, consider using UWSGI + web server (eg. Nginx) (reference below)
 
